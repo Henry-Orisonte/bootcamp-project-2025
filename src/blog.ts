@@ -30,6 +30,7 @@ const blogContainer = document.getElementById("blog-container");
 
 blogs.forEach((blog) => {
   const div = document.createElement("div");
+  div.className = "blog-post"
 
   const image = document.createElement("img");
   image.src = blog.image;

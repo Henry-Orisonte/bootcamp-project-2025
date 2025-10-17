@@ -19,6 +19,7 @@ var blogs = [
 var blogContainer = document.getElementById("blog-container");
 blogs.forEach(function (blog) {
     var div = document.createElement("div");
+    div.className = "blog-post";
     var image = document.createElement("img");
     image.src = blog.image;
     image.alt = blog.imageAlt;

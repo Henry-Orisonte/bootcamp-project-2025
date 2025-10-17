@@ -13,15 +13,15 @@ const blogs: Blog[] = [
     date: "10-16-2025",
     description: "First time having it, tasted suprsignly well",
     image: "./focaccia.jpg",
-    imageAlt: "",
+    imageAlt: "focacci",
     slug: "made-focaccia",
   },
   {
     title: "Made Bannana Bread",
     date: "10-16-2025",
     description: "Sadly didnt get a pic",
-    image: "pic here",
-    imageAlt: "",
+    image: "./Bread.jpg",
+    imageAlt: "banana bread",
     slug: "made-bread",
   },
 ];

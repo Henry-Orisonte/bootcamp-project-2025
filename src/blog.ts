@@ -43,7 +43,7 @@ blogs.forEach((blog) => {
 
   const link = document.createElement("a");
   link.href = `blogs/${blog.slug}.html`;
-  
+  link.textContent = "Read more";
 
   const description = document.createElement("p");
   description.textContent = blog.description;

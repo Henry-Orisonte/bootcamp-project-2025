@@ -1,11 +1,3 @@
-/* Color Palette (Soft Blue Theme)
-   --light-bg: #f3f6fa;    // very light blue/gray
-   --soft-blue: #6c8ebf;   // soft muted blue
-   --deep-blue: #3f5f8c;   // darker faded blue for titles
-   --text-dark: #2c3e50;   // dark text
-   --text-light: #6b7280;  // subtle gray text
-   --white: #ffffff;
-*/
 
 :root {
   --light-bg: #f3f6fa;
@@ -48,7 +40,7 @@
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-  border: 1px solid rgba(108, 142, 191, 0.15); /* subtle blue border */
+  border: 1px solid rgba(108, 142, 191, 0.15); 
 }
 
 /* Image styling */
@@ -87,19 +79,4 @@
   width: 100%;
 }
 
-/* Responsive layout */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
 
-  .aboutImage img {
-    max-width: 100%;
-  }
-
-  .pageTitle {
-    font-size: 2rem;
-  }
-}

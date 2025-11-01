@@ -1,6 +1,107 @@
-.blogCard {
-  background: white;
+/* Color Palette (Faded Blue Theme) */
+:root {
+  --light-bg: #f3f6fa;
+  --soft-blue: #6c8ebf;
+  --deep-blue: #3f5f8c;
+  --text-dark: #2c3e50;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+/* Main container */
+.main {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  color: var(--text-dark);
+}
+
+/* Page title */
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--deep-blue);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Blog list container */
+.blogList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual blog card styling */
+.blogPost {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blogPost:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Blog title */
+.blogTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--deep-blue);
+  margin-bottom: 12px;
+}
+
+/* Blog image */
+.blogImage {
   border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Blog description */
+.blogDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+/* Blog date */
+.blogDate {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: auto;
+}
+
+/* Link wrapper (for BlogPreview) */
+.blogLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: 40px 15px;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .blogList {
+    gap: 20px;
+  }
 }

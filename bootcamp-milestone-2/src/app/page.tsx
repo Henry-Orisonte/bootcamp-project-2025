@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
+// @ts-ignore
 import style from "./page.module.css";
 
 

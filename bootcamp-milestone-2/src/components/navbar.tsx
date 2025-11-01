@@ -19,7 +19,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link className={style.navLink} href="/blogs">
+            <Link className={style.navLink} href="/blog">
               Blogs
             </Link>
           </li>
@@ -29,7 +29,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link className={style.navLink} href="/about">
+            <Link className={style.navLink} href="/contact">
               Contact Me
             </Link>
           </li>

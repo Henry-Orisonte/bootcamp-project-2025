@@ -4,8 +4,8 @@
   margin: 0 auto;
   padding: 40px 20px;
   font-family: "Inter", sans-serif;
-  background-color: #f3f6fa; /* light faded blue */
-  color: #2c3e50; /* dark text for readability */
+  background-color: #f3f6fa; 
+  color: #2c3e50; 
   line-height: 1.6;
 }
 
@@ -15,7 +15,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 40px;
-  color: #3f5f8c; /* deep faded blue */
+  color: #3f5f8c; 
 }
 
 /* Section titles */
@@ -23,21 +23,21 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #3f5f8c; /* match page title */
-  border-bottom: 2px solid #6c8ebf; /* softer blue for accent */
+  color: #3f5f8c; 
+  border-bottom: 2px solid #6c8ebf; 
   padding-bottom: 5px;
 }
 
-/* Individual entries (education, project, work, etc.) */
+/* Individual entries  */
 .entry {
   margin-bottom: 25px;
   padding: 20px;
-  background-color: #ffffff; /* white cards */
+  background-color: #ffffff; 
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(63, 95, 140, 0.1); /* subtle shadow */
+  box-shadow: 0px 4px 12px rgba(63, 95, 140, 0.1); 
 }
 
-/* Entry title (school, job, project) */
+/* Entry title  */
 .entryTitle {
   font-size: 1.2rem;
   font-weight: 600;
@@ -45,14 +45,14 @@
   margin-bottom: 8px;
 }
 
-/* Entry details (dates, info) */
+/* Entry details  */
 .entryInfo {
   font-size: 1rem;
   color: #444;
   margin-bottom: 5px;
 }
 
-/* Entry description (projects, experience details) */
+/* Entry description  */
 .entryDescription {
   font-size: 0.95rem;
   color: #555;
@@ -70,18 +70,4 @@
   border-top: 1px solid #ddd;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .main {
-    padding: 30px 15px;
-  }
 
-  .pageTitle {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-
-  .sectionTitle {
-    font-size: 1.5rem;
-  }
-}

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import blogs from "../blogData";
-import Link from "next/link";
+
 import BlogPreview from "../../components/blogPreview";
 // @ts-ignore
 import style from "./page.module.css";

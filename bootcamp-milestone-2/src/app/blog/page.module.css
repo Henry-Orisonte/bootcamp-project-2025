@@ -1,4 +1,4 @@
-/* Color Palette (Faded Blue Theme) */
+
 :root {
   --light-bg: #f3f6fa;
   --soft-blue: #6c8ebf;
@@ -90,18 +90,3 @@
   color: inherit;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .main {
-    padding: 40px 15px;
-  }
-
-  .pageTitle {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-
-  .blogList {
-    gap: 20px;
-  }
-}

@@ -2,9 +2,8 @@ import React from "react";
 import Navbar from "../../components/navbar";
 import blogs from "../blogData";
 import BlogPreview from '../../components/blogPreview';
-
-//import styles from "/blogPrevi.module.css"; // optional CSS module
-
+// @ts-ignore
+import styles from "./page.module.css"; 
 export default function BlogPage() {
   return (
     <main>

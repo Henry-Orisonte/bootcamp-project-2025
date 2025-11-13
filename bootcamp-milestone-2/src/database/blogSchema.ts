@@ -7,7 +7,7 @@ type Blog = {
   description: string; // for preview
   content: string; // text content for individual blog page
   image: string; // url for string in public
-  image_alt: string; // alt for image
+  imageAlt: string; // alt for image
   slug: string;
 };
 
@@ -18,7 +18,7 @@ const blogSchema = new Schema<Blog>({
   date: { type: Date, required: false, default: new Date() },
   description: { type: String, required: true },
   image: { type: String, required: true },
-  image_alt: { type: String, required: true },
+  imageAlt: { type: String, required: true },
   content: { type: String, required: true },
 });
 

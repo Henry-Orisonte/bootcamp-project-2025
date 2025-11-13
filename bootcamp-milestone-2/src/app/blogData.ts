@@ -1,30 +1,18 @@
-export interface Blog{
-    title: string;
-    date: string;
-    description: string;
-    image: string;
-    imageAlt: string;
-    slug: string
+import connectDB from "@/database/db";
+import Blog from "@/database/blogSchema";
+
+export async function getBlogs() {
+  await connectDB(); // function from db.ts before
+
+  try {
+    // query for all blogs and sort by date
+    const blogs = await Blog.find().sort({ date: -1 }).orFail();
+    // send a response as the blogs as the message
+    return blogs;
+  } catch (err) {
+    return null;
+  }
 }
 
-const blogs: Blog[] = [
-    {
-    title: "Made Focaccia",
-    date: "10-16-2025",
-    description: "First time having it, tasted suprsignly well",
-    image: "./focaccia.jpg",
-    imageAlt: "focacci",
-    slug: "made-focaccia", 
-    },
-    {
-    title: "Made Bannana Bread",
-    date: "10-16-2025",
-    description: "Sadly didnt get a pic",
-    image: "./Bread.jpg",
-    imageAlt: "banana bread",
-    slug: "made-bread",
-    },
 
-];
-
-export default blogs; // will allow us to access the data anywhere
+// will allow us to access the data anywhere

@@ -1,5 +1,4 @@
 import React from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 // @ts-ignore
@@ -37,7 +36,6 @@ export default function BlogPreview({
       </Link>
         <p className={styles.blogDescription}>{description}</p>
         <p className={styles.blogDate}>Posted on {date}</p>
-         <Link href={`/blog/${slug}`}>Read more</Link>
     </div>
   );
 }

@@ -34,7 +34,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link className={style.navLink} href="/porfolio">
+            <Link className={style.navLink} href="/portfolio">
               Portfolio
             </Link>
           </li>

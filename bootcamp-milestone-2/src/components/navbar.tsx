@@ -33,6 +33,11 @@ export default function Navbar() {
               Contact Me
             </Link>
           </li>
+          <li>
+            <Link className={style.navLink} href="/porfolio">
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

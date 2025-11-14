@@ -21,10 +21,10 @@ export default function BlogPreview({
   imageAlt,
   slug,
 }: BlogProps) {
-   return (
-      <div className={styles.blogPost}>
-        <h1 className={styles.blogTitle}>{title}</h1>
-        <Link href={`/blog/${slug}`} className={styles.blogLink}>
+  return (
+    <div className={styles.blogPost}>
+      <h1 className={styles.blogTitle}>{title}</h1>
+      <Link href={`/blog/${slug}`} className={styles.blogLink}>
         <Image
           src={image}
           alt={imageAlt}
@@ -34,8 +34,8 @@ export default function BlogPreview({
           unoptimized
         />
       </Link>
-        <p className={styles.blogDescription}>{description}</p>
-        <p className={styles.blogDate}>Posted on {date}</p>
+      <p className={styles.blogDescription}>{description}</p>
+      <p className={styles.blogDate}>Posted on {date}</p>
     </div>
   );
 }

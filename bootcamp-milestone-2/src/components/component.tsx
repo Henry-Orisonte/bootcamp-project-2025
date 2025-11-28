@@ -2,7 +2,7 @@
 {/* When we pass props, the name that we use to pass values
 		is the key for the type
 */}
-import type { IComment } from "@/database/blogSchema";
+import type {IComment} from "@/database/blogSchema"
 
 type CommentProps = {
     comment: IComment;

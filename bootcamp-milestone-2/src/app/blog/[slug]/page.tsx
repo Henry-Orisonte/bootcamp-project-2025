@@ -1,14 +1,14 @@
-// src/app/blog/page.tsx
-import BlogPreview from "@/components/blogPreview";
-import connectDB from "@/database/db";
-import CSS from "csstype";
+// src/app/blog/[slug]/page.tsx
 
+import BlogPreview from "@/components/blogPreview";
+import Comment from "@/components/component"; // <-- if you have a Comment component
+import CSS from "csstype";
 
 type Props = {
   params: { slug: string };
 };
 
-const  centerStyle: CSS.Properties = {
+const centerStyle: CSS.Properties = {
   justifySelf: "center",
   alignSelf: "center",
   fontSize: "2rem",
@@ -17,7 +17,7 @@ const  centerStyle: CSS.Properties = {
 async function getBlog(slug: string) {
   try {
     const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
-      cache: "no-store", // ensures fresh data every request
+      cache: "no-store", // always fetch fresh data
     });
 
     if (!res.ok) {
@@ -25,8 +25,8 @@ async function getBlog(slug: string) {
     }
 
     return res.json();
-  } catch (err: unknown) {
-    console.log(`error: ${err}`);
+  } catch (err) {
+    console.log("error:", err);
     return null;
   }
 }
@@ -34,14 +34,14 @@ async function getBlog(slug: string) {
 export default async function Blog({ params: { slug } }: Props) {
   const blog = await getBlog(slug);
 
+  // Blog not found
   if (!blog) {
     return <div style={centerStyle}>This blog does not exist.</div>;
   }
 
-
-
   return (
     <div style={{ padding: "1rem" }}>
+      {/* Blog content */}
       <BlogPreview
         key={blog.slug}
         title={blog.title}
@@ -53,6 +53,17 @@ export default async function Blog({ params: { slug } }: Props) {
         content={blog.content}
         comments={blog.comments}
       />
+
+      {/* Comments Section */}
+      <h2 style={{ marginTop: "2rem", fontSize: "1.5rem" }}>Comments</h2>
+
+      {blog.comments && blog.comments.length > 0 ? (
+        blog.comments.map((comment: any, index: number) => (
+          <Comment key={index} comment={comment} />
+        ))
+      ) : (
+        <p>No comments yet.</p>
+      )}
     </div>
   );
 }

@@ -21,6 +21,8 @@ export default async function BlogPage() {
             image={blog.image}
             imageAlt={blog.imageAlt} // match your schema name
             slug={blog.slug}
+            content={blog.content}
+            comments={blog.comments}
           />
         ))}
       </main>

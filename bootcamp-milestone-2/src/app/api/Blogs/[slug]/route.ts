@@ -46,7 +46,7 @@ export async function GET(req: NextRequest, { params }: IParams) {
 		const { slug } = params // another destructure
 
 	   try {
-	        const blog = await blogSchema.findOne({ slug }).orFail()
+	        const blog = await blogSchema.findOne({ slug }).lean().orFail()
 	        return NextResponse.json(blog)
 	    } catch (err) {
 	        return NextResponse.json('Blog not found.', { status: 404 })

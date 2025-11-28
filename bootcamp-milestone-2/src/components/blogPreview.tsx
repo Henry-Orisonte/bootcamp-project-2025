@@ -11,6 +11,12 @@ interface BlogProps {
   image: string;
   imageAlt: string;
   slug: string;
+  content: string;
+  comments: {
+    user: string;
+    comment: string;
+    time: Date;
+  }[];
 }
 
 export default function BlogPreview({
@@ -20,6 +26,8 @@ export default function BlogPreview({
   image,
   imageAlt,
   slug,
+  content,
+  comments
 }: BlogProps) {
   return (
     <div className={styles.blogPost}>
@@ -36,6 +44,14 @@ export default function BlogPreview({
       </Link>
       <p className={styles.blogDescription}>{description}</p>
       <p className={styles.blogDate}>Posted on {date}</p>
+      <div>
+        <h3>Comments</h3>
+        {comments.map((c, i) => (
+          <div key={i}>
+            <strong>{c.user}</strong>: {c.comment} ({new Date(c.time).toDateString()})
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

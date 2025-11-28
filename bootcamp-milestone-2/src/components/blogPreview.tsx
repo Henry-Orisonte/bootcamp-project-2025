@@ -43,7 +43,7 @@ export default function BlogPreview({
         />
       </Link>
       <p className={styles.blogDescription}>{description}</p>
-      <p className={styles.blogDate}>Posted on {date}</p>
+      <p className={styles.blogDate}>Posted on {new Date(date).toLocaleString()}</p>
       <div>
         <h3>Comments</h3>
         {comments.map((c, i) => (

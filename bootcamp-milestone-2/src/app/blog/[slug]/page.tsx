@@ -1,13 +1,12 @@
 // src/app/blog/page.tsx
-import BlogPreview from '@/components/blogPreview';
-import connectDB from '@/database/db';
-import Blog from '@/database/blogSchema';
-import CSS from 'csstype';
+import BlogPreview from "@/components/blogPreview";
+import connectDB from "@/database/db";
+import Blog from "@/database/blogSchema";
 
-const centerStyle: CSS.Properties = {
-  justifySelf: 'center',
-  alignSelf: 'center',
-  fontSize: '2rem',
+const centerStyle = {
+  justifySelf: "center",
+  alignSelf: "center",
+  fontSize: "2rem",
 };
 
 export default async function BlogPage() {
@@ -15,13 +14,13 @@ export default async function BlogPage() {
 
   let blogs;
   try {
-    blogs = await Blog.find() 
+    blogs = await Blog.find();
   } catch (err) {
-    console.error('Error fetching blogs:', err);
+    console.error("Error fetching blogs:", err);
     return <div style={centerStyle}>This Blog does not exist.</div>;
   }
 
-  if (!blogs || blogs.length === 0) {
+  if (!blogs?.length) {
     return <div style={centerStyle}>No blog posts yet.</div>;
   }
 
@@ -43,4 +42,3 @@ export default async function BlogPage() {
     </div>
   );
 }
-

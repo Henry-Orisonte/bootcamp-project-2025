@@ -2,17 +2,12 @@
 
 import BlogPreview from "@/components/blogPreview";
 import Comment from "@/components/component"; // <-- if you have a Comment component
-import CSS from "csstype";
 
 type Props = {
   params: { slug: string };
 };
 
-const centerStyle: CSS.Properties = {
-  justifySelf: "center",
-  alignSelf: "center",
-  fontSize: "2rem",
-};
+
 
 async function getBlog(slug: string) {
   try {
@@ -36,7 +31,7 @@ export default async function Blog({ params: { slug } }: Props) {
 
   // Blog not found
   if (!blog) {
-    return <div style={centerStyle}>This blog does not exist.</div>;
+    return <div style={{ textAlign: "center", fontSize: "2rem" }}>This blog does not exist.</div>;
   }
 
   return (

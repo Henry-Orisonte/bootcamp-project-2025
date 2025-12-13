@@ -1,17 +1,15 @@
 // src/app/blog/[slug]/page.tsx
 
 import BlogPreview from "@/components/blogPreview";
-import Comment from "@/components/component"; // <-- if you have a Comment component
+import Comment from "@/components/component"; 
 
 type Props = {
   params: { slug: string };
 };
 
-
-
 async function getBlog(slug: string) {
   try {
-    const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
+    const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
       cache: "no-store", // always fetch fresh data
     });
 

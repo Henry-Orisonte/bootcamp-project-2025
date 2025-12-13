@@ -71,6 +71,21 @@
   background-color: #6c8ebf; 
 }
 
+/* Error message */
+.error {
+  margin-top: 15px;
+  color: #c0392b;
+  font-weight: 500;
+}
+
+/* Success message */
+.success {
+  margin-top: 15px;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+
 /* Footer styling */
 .footer {
   text-align: center;

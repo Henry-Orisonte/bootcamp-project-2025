@@ -35,6 +35,25 @@ a {
   text-decoration: none;
 }
 
+
+:root { 
+  --light-bg: #f3f6fa;
+  --soft-blue: #6c8ebf;
+  --deep-blue: #3f5f8c;
+  --text-dark: #2c3e50;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+:root {
+  --light-bg: #f3f6fa;
+  --soft-blue: #6c8ebf;
+  --deep-blue: #3f5f8c;
+  --text-dark: #2c3e50;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

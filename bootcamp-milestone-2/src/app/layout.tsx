@@ -21,15 +21,11 @@ export default function RootLayout({
   // returns boilerplate
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* remember Inter is simply the font I chose */}
+        
+        {children}
+      </body>
     </html>
   );
 }
-
-<html lang="en">
-  <body className={inter.className}>
-    {" "}
-    //remember Inter is simply the font I chose.
-    <Navbar /> // This sets the navbar on every page
-  </body>
-</html>;
